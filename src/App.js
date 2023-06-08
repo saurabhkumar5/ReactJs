@@ -1,30 +1,22 @@
 
-import './App.css';
-
-function App() {
-  let name = 'react app'
+let name = "saurabh";
+function App(){
   return (
-    <div className="App">
-      <div className='App-header'>
-              {name}
-              {/* Hello World */}
-              <Demo></Demo>
-      </div>
-      
+    <>
+    <nav>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contaxct</li>
+      <li>Hello</li>
+    </nav>
+    <div className="container">
+      <h1>Hello {name}</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, molestias placeat officia nulla iure, sint doloremque quisquam hic eveniet tempore tenetur voluptate facilis enim. Voluptatum nobis ducimus corporis quae fuga.</p>
     </div>
-  );
-}
+    </>
 
-function Demo() {
-  return (
-    <div className="App">
-      <div className='App-header'>
-              Demo
-      </div>
-      
-    </div>
   );
-}
 
+}
 
 export default App;
