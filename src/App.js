@@ -1,19 +1,19 @@
+// import Header from './Header';
+// import {Header,Footer} from './Header'; //multile function import
+//import Header,{Footer} from './Header'; //default and object ko ek saath import kiya h
+import Header from './Header';
 
-let name = "saurabh";
 function App(){
+  let name = "maurya";
   return (
-    <>
-    <nav>
-      <li>Home</li>
-      <li>About</li>
-      <li>Contaxct</li>
-      <li>Hello</li>
-    </nav>
     <div className="container">
-      <h1>Hello {name}</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, molestias placeat officia nulla iure, sint doloremque quisquam hic eveniet tempore tenetur voluptate facilis enim. Voluptatum nobis ducimus corporis quae fuga.</p>
+      <Header/>
+      <h1> {name}</h1>
+
+      {/* <footer/> small f use karenege to jsx samejhega ye mere hi andar ka h bahar ka nhi esliye capital likhte h */}
+      {/* /* <Footer /> */ }
+      
     </div>
-    </>
 
   );
 
