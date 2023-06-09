@@ -1,0 +1,10 @@
+.App{
+    background-color: rgb(32, 33, 33);
+    color: white;
+}
+.header{
+    background-color: yellowgreen;
+}
+.footer{
+    background-color: blueviolet;
+}
