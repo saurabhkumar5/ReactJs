@@ -1,12 +1,20 @@
 import './App.css';
-import Header from './Header';
-
+import Student from './components/Student';
 function App(){
-  let name = "maurya";
   return (
     <div className="App">
-      <Header/>
-      <h1> {name}</h1>
+      <Student 
+       name = "saurabh"
+       age = {20}
+      />
+      <Student 
+       name = "sumit"
+       age = {10}
+      />
+      <Student 
+       name = "sanchi"
+       age = {18}
+      />
       
     </div>
 
