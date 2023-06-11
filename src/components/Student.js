@@ -1,6 +1,4 @@
 
-import Comp from "./Comp"
-import propTypes from 'prop-types'
 const Student = (props) => {
   return (
     <>
@@ -11,13 +9,3 @@ const Student = (props) => {
   )
 }
 
-Student.propTypes = {
-    name:propTypes.string,
-    age:propTypes.number
-}
-Student.defaultProps = {
-    name:"Name",
-    age:0
-}
-
-export default Student
