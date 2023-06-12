@@ -1,35 +1,26 @@
-import './App.css';
-import React,{useState} from 'react';
+import React,{useState} from 'react'
+import './App.css'
 
 const App = () => {
 
-  // console.log(useState); //function return karega
-  // console.log(useState()); //ek array return karega,[undefined,f], eska matlab bracket me kuch likhenge to wo zero index par aa jayega
-  //console.log(useState('suman')); //op => ['suman',f]
+  const [value,changeValue] = useState('Maurya');
 
-  // let firstValue = useState("raman")[0];
-  // console.log(firstValue);
+  const fnct = ()=>{
+    let val = value;
+    // if(val==='Maurya'){
+    //   changeValue('Shaurya')
+    // }else{
+    //   changeValue('Maurya');
+    // }
 
-  //var val = 'saurabh maurya';
-
-  //ab use karna useState ka, useState hamesha return k upar hi use hoga
-
-  const [myName,setMyName] = useState('saurabh maurya')
-
-
-  const changeName = ()=>{
-    
-      //  val = 'sumit'
-      //  console.log(val);
-      setMyName('sumit maurya');
+    (val==='Maurya')?changeValue('Shaurya'):changeValue('Maurya');
   }
-      console.log(myName);
+
 
   return (
     <div className='App'>
-      {/* <h1>saurabh maurya</h1> */}
-      <h1>{myName}</h1>
-      <button onClick={changeName}>click</button>
+      <h1>{value}</h1>
+      <button onClick={fnct}>click me</button>
     </div>
   )
 }
