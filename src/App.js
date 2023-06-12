@@ -1,72 +1,39 @@
-import "./App.css";
-import Header from "./components/Header";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import AddIcon from "@mui/icons-material/Add";
-import { useState } from "react";
-import Fields from "./components/Fields";
-function App() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [data,setData] = useState([])
+import './App.css';
+import React,{useState} from 'react';
 
-  const addData = ()=>{
-    // setData({
-    //   // name: name,
-    //   // email: email
-    //   //or
-    //   name,email
-    // })
-    setData([...data, {name,email}]);
-    setName("");
-    setEmail("");
+const App = () => {
+
+  // console.log(useState); //function return karega
+  // console.log(useState()); //ek array return karega,[undefined,f], eska matlab bracket me kuch likhenge to wo zero index par aa jayega
+  //console.log(useState('suman')); //op => ['suman',f]
+
+  // let firstValue = useState("raman")[0];
+  // console.log(firstValue);
+
+  //var val = 'saurabh maurya';
+
+  //ab use karna useState ka, useState hamesha return k upar hi use hoga
+
+  const [myName,setMyName] = useState('saurabh maurya')
+
+
+  const changeName = ()=>{
+    
+      //  val = 'sumit'
+      //  console.log(val);
+      setMyName('sumit maurya');
   }
+      console.log(myName);
 
   return (
-    <div className="App">
-      <Header />
-      {/* form */}
-      <div className="form">
-        <Stack spacing={2} direction="row">
-          <TextField
-            value={name}
-            onChange={(event)=>setName(event.target.value)}
-            id="outlined-basic"
-            label="name"
-            variant="outlined"
-          />
-          <TextField
-            value={email}
-            onChange={(event)=>setEmail(event.target.value)}
-            id="outlined-basic"
-            label="email"
-            variant="outlined"
-          />
-          <Button onClick={addData} color="success" variant="contained">
-            <AddIcon />
-          </Button>
-        </Stack>
-      </div>
-
-      {/* data */}
-      <div className="data">
-        <div className="data_val">
-          <h4>Name</h4>
-          <h4>Email</h4>
-          <h4>Remove</h4>
-        </div>
-        {
-          data.map((element,index)=>{
-            return (
-              <Fields key={index} name = {element.name} email = {element.email} index = {index}/>
-            )
-          })
-        }
-
-      </div>
+    <div className='App'>
+      {/* <h1>saurabh maurya</h1> */}
+      <h1>{myName}</h1>
+      <button onClick={changeName}>click</button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
+
