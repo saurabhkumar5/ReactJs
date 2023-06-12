@@ -1,40 +1,30 @@
 import './App.css';
 import Header from './components/Header';
-import Movie from './components/Movie';
-import data from './data';
-function App(){
-    let login = false;
-    // if(login==false){
-    //   return <h1>ja mai tujhe nhi dikhega</h1>
-    // }
+import React,{useState} from 'react';
 
-//jsx k andar direct termnary operator or if else use nhi kar sakte h
+
+function App(){
+
+   const [num,setNum] = useState(1); //1 k jagah kuch bhi rakh sakte h jaise string bhi
+  //const [num,setNum] = useState("saurabh")
+
+  function inc(){
+       setNum(num+1)
+  }
+  function dec(){
+    setNum(num-1);
+  }
 
   return (
     <div className='App'>
-      {
-        login == true ? <h1 style={{color:"black"}}>ja bhai yha se</h1>:<h1 style={{color:"black"}}>ja dekh le</h1>
-      }
       <Header/>
       <div className='main'>
-        {
-        data.map((element,index)=>{
-          return (
-            <Movie
-            key = {index}
-             title = {element.Title}
-             year = {element.Year}
-             img = {element.Poster}         
-            />
-          )
-        })
-          
-        }
-        
-        
+        <h1 className='heading'>{num}</h1>
+        <div className='buttons'>
+          <button className='btn' onClick={inc}>increment</button>
+          <button className='btn' onClick={dec}>decrement</button>
+        </div>
       </div>
-
-      
     </div>
 
   );
