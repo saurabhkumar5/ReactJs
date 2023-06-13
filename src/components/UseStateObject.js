@@ -1,22 +1,34 @@
-import React, { useState } from 'react'
+import React,{useState} from 'react'
 
 const UseStateObject = () => {
-    const [myObject, setmyObject] = useState({
-        myName:"Saurabh Maurya",myAge:46,degree:"B.tech"
-    })
-    // const ChangeObject = ()=>{
-    //      setmyObject({myName:"Sumit Maurya",myAge:86,degree:"Bsc"})
-    // }
-    //we will use spread opreator
-    const ChangeObject = ()=>{
-        setmyObject({...myObject,myName:"Sumit Maurya"})
-   }
+    const myBioData = [
+        {
+            id:0, myName:"Saurabh",myAge:23
+        },
+        {
+            id:1, myName:"Sumit", myAge:45
+        }
+    ]
+    const [first, setfirst] = useState(myBioData)
+    const lolo = ()=>{
+        setfirst([]);
+    }
+    const rom = (id)=>{
+        // alert(id);
+        const myNewArray = first.filter((curElem)=>{
+            return curElem.id==!id
+        })
+        setfirst(myNewArray);
+    }
   return (
     <div>
-        <h1>Name: {myObject.myName} & age: {myObject.myAge} & degree:{myObject.degree}</h1>
-        <button className='btn' onClick={ChangeObject}>update</button>
+        {
+            first.map((ele)=>{
+               return <h1 key={ele.id}>Name:{ele.myName} & age:{ele.myAge} <button className='btnn' onClick={()=>rom(ele.id)}>remove</button></h1>
+            })
+        }
+        <button className='btn' onClick={lolo}>Clear</button>
     </div>
-    
   )
 }
 

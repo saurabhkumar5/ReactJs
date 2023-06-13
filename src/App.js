@@ -1,11 +1,9 @@
 import './App.css'
-import UseStateObject from './components/UseStateObject'
+import ShortCircuit from './components/ShortCircuit'
 const App = () => {
-
-  
   return (
     <div className='App'>
-     <UseStateObject/>
+     <ShortCircuit/>
     </div>
   )
 }
