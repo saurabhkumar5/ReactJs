@@ -10,9 +10,26 @@ const UseEffect = () => {
 
 
     useEffect(()=>{
+        if(count>=1){
+            document.title = `Chats (${count})`
+        }
+        else{
+            document.title = `Chats`
+        }
+    // });
+},[count]);
+
+
+useEffect(()=>{
+    if(count>=1){
         document.title = `Chats (${count})`
-    });
-    console.log('sumit');
+    }
+    else{
+        document.title = `Chats`
+    }
+// });
+},[count]);
+   
   return (
     <div>
         <h1>{count}</h1>
