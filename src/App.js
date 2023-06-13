@@ -1,9 +1,9 @@
 import './App.css'
-import ShortCircuit from './components/ShortCircuit'
+import UseEffect from './components/useEffect/UseEffect'
 const App = () => {
   return (
     <div className='App'>
-     <ShortCircuit/>
+     <UseEffect/>
     </div>
   )
 }
