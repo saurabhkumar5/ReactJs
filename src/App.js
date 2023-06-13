@@ -1,13 +1,11 @@
-import RulesHook from './components/rulesHook'
 import './App.css'
-import UseStateArray from './components/UseStateArray'
-
+import UseStateObject from './components/UseStateObject'
 const App = () => {
 
   
   return (
     <div className='App'>
-     <UseStateArray/>
+     <UseStateObject/>
     </div>
   )
 }
